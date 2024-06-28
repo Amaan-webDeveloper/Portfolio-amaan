@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from "framer-motion";
+import { Hero } from '../index';
 import {
     Card,
     CardContent,
@@ -11,28 +11,16 @@ import {
 import { Button } from "../ui/button";
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
 
-    const heroText = "A self taught Web Developer.".split(" ")
+    
 
     return (
         <div className='dark:bg-neutral-900'>
-            <div className='w-full md:text-[50px] text-[40px] poppins-regular dark:text-white'>
-                <p>Hello, I&apos;m Amaan Hussain,</p>
-                <div>{heroText.map((text, i) => (
-                    <motion.span
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                            duration: 0.25,
-                            delay: i / 10,
-                        }}
-                        key={i}
-                    >
-                        {text}{" "}
-                    </motion.span>
-                ))}</div>
-            </div>
+            {/* section 1 */}
+            <Hero/>
+            {/*  */}
             <div className='bg-yellow-200 my-14 w-full py-8 shadow rounded-lg flex justify-center flex-col items-center dark:bg-neutral-600 dark:text-white'>
                 <h1 className='text-lg'>My Tech Stack</h1>
 
@@ -139,8 +127,8 @@ const Home = () => {
             </div>
             <div className='bg-purple-400 mt-14 w-full py-4 px-8 shadow rounded-lg flex flex-wrap justify-between items-center gap-8 dark:text-white dark:bg-neutral-600 '>
                 <div>
-                <h1>Email: amaanhussain.web@gmail.com</h1>
-                <h1>Phone no.: +91 96912354112</h1>
+                    <h1>Email: amaanhussain.web@gmail.com</h1>
+                    <h1>Phone no.: +91 96912354112</h1>
                 </div>
                 <h1>Hope you find it useful</h1>
             </div>
